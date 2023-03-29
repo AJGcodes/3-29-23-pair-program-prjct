@@ -18,7 +18,10 @@ console.log(test); // ['LAIKA', 'BELKA']
 
 function myForEach(array, cb) {
   // Your code here
-  array.forEach(cb);
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    cb(element, i, array);
+  }
 }
 myForEach(["a", "b", "c"], function (el, i) {
   console.log(el + " is at index " + i);
